@@ -13,3 +13,7 @@ module "instance" {
 module "postgressqlDB" {
   source = "./modules/PostgresDB"
 }
+
+module "azureK8s" {
+  source = "./modules/AzureK8s"
+}
