@@ -1,10 +1,10 @@
 resource "azurerm_resource_group" "postgresql-rg" {
-  name     = "kopi-postgresql-rg"
-  location = "North Europe"
+  name     = "webapp-postgresql-rg"
+  location = "West US"
 }
 
 resource "azurerm_postgresql_server" "postgresql-server" {
-  name                = "kopi-postgresql-server"
+  name                = "webapp-postgresql-server"
   location            = azurerm_resource_group.postgresql-rg.location
   resource_group_name = azurerm_resource_group.postgresql-rg.name
 
@@ -25,7 +25,7 @@ resource "azurerm_postgresql_server" "postgresql-server" {
 }
 
 resource "azurerm_postgresql_database" "postgresql-db" {
-  name                = "kopidb"
+  name                = "webapp"
   resource_group_name = azurerm_resource_group.postgresql-rg.name
   server_name         = azurerm_postgresql_server.postgresql-server.name
   charset             = "utf8"

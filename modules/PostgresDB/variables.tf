@@ -1,7 +1,7 @@
 variable "postgresql-admin-login" {
   type        = string
   description = "Login to authenticate to PostgreSQL Server"
-  default     = "kopiadmin"
+  default     = "webappadmin"
 }
 variable "postgresql-admin-password" {
   type        = string
