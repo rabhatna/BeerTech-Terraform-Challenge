@@ -6,13 +6,13 @@ provider "azurerm" {
   features {}
 }
 
-module "instance" {
-  source = "./modules/Instance"
-}
-
-module "postgressqlDB" {
-  source = "./modules/PostgresDB"
-}
+# module "instance" {
+#   source = "./modules/Instance"
+# }
+#
+# module "postgressqlDB" {
+#   source = "./modules/PostgresDB"
+# }
 
 module "azureK8s" {
   source = "./modules/AzureK8s"
